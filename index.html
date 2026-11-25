@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#075b48">
+<title>RANUP — Discover Deeper. Travel Better.</title>
+<style>
+:root{--green:#075b48;--green2:#0b7860;--mint:#e8f4ef;--teal:#1b9b91;--gold:#d5a84d;--ink:#17352e;--muted:#71827c;--paper:#fbfcf9;--line:#e4ebe6;--white:#fff;--shadow:0 14px 38px #12382a12}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.wrap{width:min(1180px,92%);margin:auto}.topbar{background:#064b3d;color:#dceee7;font-size:12px;padding:8px 0}.topbar .wrap{display:flex;justify-content:space-between;gap:12px}.nav{position:sticky;top:0;z-index:20;background:#ffffffed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.navin{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:19px;letter-spacing:-.6px;color:var(--green)}.brandmark{width:38px;height:38px;border-radius:13px;background:var(--green);color:#f4d58e;display:grid;place-items:center;font-size:20px}.links{display:flex;align-items:center;gap:22px}.links a{color:#49645b;text-decoration:none;font-size:13px;font-weight:650}.links a:hover{color:var(--green)}.navright{display:flex;align-items:center;gap:10px}.btn{border:0;border-radius:999px;padding:11px 17px;background:var(--green);color:white;font-weight:750;font-size:13px;box-shadow:0 6px 14px #075b4820}.btn:hover{background:var(--green2);transform:translateY(-1px)}.btn.outline{background:white;color:var(--green);border:1px solid #cbdcd3;box-shadow:none}.btn.gold{background:var(--gold);color:#263b2f}.btn.small{padding:8px 12px;font-size:12px}.selectlang{border:1px solid var(--line);border-radius:20px;padding:8px;background:white;color:var(--green)}.hero{padding:62px 0 56px;background:radial-gradient(circle at 82% 22%,#d8eee4 0,transparent 30%),linear-gradient(115deg,#f4f8f2,#eaf4ed 60%,#f8f5e9);overflow:hidden}.heroGrid{display:grid;grid-template-columns:1.02fr .98fr;gap:45px;align-items:center}.eyebrow{color:var(--green2);font-size:11px;font-weight:850;letter-spacing:2px;text-transform:uppercase}.hero h1{font-family:Georgia,serif;font-size:clamp(42px,5vw,67px);line-height:1.04;letter-spacing:-2px;margin:14px 0 18px;color:#123c30}.hero h1 em{color:#b88c36;font-weight:500}.hero p{color:#63766e;max-width:520px;font-size:16px}.heroActions{display:flex;gap:12px;margin:27px 0}.heroMeta{display:flex;gap:25px;color:#6e8179;font-size:12px}.heroMeta b{display:block;color:var(--green);font-size:19px}.heroVisual{position:relative;min-height:410px}.heroPhoto{position:absolute;inset:0 15px 20px 28px;border-radius:28px;overflow:hidden;background:linear-gradient(0deg,#063d30aa,transparent 55%),url('https://images.unsplash.com/photo-1596402184320-417e7178b2cd?w=1100&q=85') center/cover;box-shadow:var(--shadow)}.heroPhoto:after{content:"";position:absolute;inset:12px;border:1px solid #ffffff88;border-radius:20px}.floatTag{position:absolute;background:white;padding:13px 16px;border-radius:15px;box-shadow:var(--shadow);font-size:12px}.floatTag strong{display:block;color:var(--green);font-size:14px}.tag1{left:0;bottom:0}.tag2{right:0;top:35px}.ornament{position:absolute;right:4px;bottom:0;color:var(--gold);font-size:45px;opacity:.8}
+section{padding:70px 0}.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:27px}.sectionHead h2{font:500 clamp(28px,3vw,39px)/1.15 Georgia,serif;margin:8px 0;color:#153c30}.sectionHead p{margin:0;color:var(--muted);font-size:13px}.textlink{color:var(--green);font-weight:800;text-decoration:none;font-size:13px}.searchbar{display:grid;grid-template-columns:1.5fr 1fr 1fr auto;gap:10px;background:white;border:1px solid var(--line);border-radius:17px;padding:12px;box-shadow:var(--shadow);margin-top:28px}.field{display:flex;flex-direction:column;gap:4px}.field label{font-size:10px;font-weight:800;color:#809087;text-transform:uppercase;letter-spacing:.7px}.field input,.field select,.field textarea{border:1px solid #e5ece7;border-radius:10px;padding:11px;background:#fbfcfa;color:var(--ink);outline:none;min-width:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal)}.searchbar .btn{align-self:end;height:43px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 24px}.chip{border:1px solid var(--line);background:white;color:#64776e;border-radius:30px;padding:8px 14px;font-size:12px;font-weight:700}.chip.active,.chip:hover{background:var(--green);color:white;border-color:var(--green)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 5px 18px #17382a08;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}.cardImg{height:190px;position:relative;background:#dbe9e1 center/cover}.pill{position:absolute;left:13px;top:13px;border-radius:30px;background:#ffffffed;padding:6px 10px;font-size:10px;font-weight:850;color:var(--green)}.fav{position:absolute;right:13px;top:12px;border:0;border-radius:50%;width:34px;height:34px;background:#ffffffed;color:#8a9a91;font-size:18px}.fav.on{color:#d45b53}.cardBody{padding:17px}.cardMeta{font-size:11px;color:#829189;display:flex;gap:7px;align-items:center}.card h3{font:600 21px Georgia,serif;margin:8px 0;color:#173e32}.card p{font-size:12px;color:#74837c;min-height:38px;margin:0 0 13px}.cardFoot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #eef2ef;padding-top:12px;font-size:11px;color:#74837c}.price{color:var(--green);font-weight:850}.empty{padding:35px;text-align:center;color:var(--muted);grid-column:1/-1;background:white;border:1px dashed var(--line);border-radius:15px}
+.featureBand{background:#073f34;color:white}.featureBand .sectionHead h2{color:white}.featureBand .sectionHead p{color:#c1d7ce}.featureGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{padding:20px;border:1px solid #ffffff24;border-radius:16px;background:#ffffff0a}.feature .ico{font-size:24px}.feature h3{font-size:14px;margin:13px 0 5px}.feature p{font-size:11px;color:#b9d1c6;margin:0}
+.twoCol{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}.mapBox{border-radius:22px;background:#eaf2e9;padding:22px;min-height:330px;position:relative;overflow:hidden}.mapBox svg{width:100%;height:270px}.mapLegend{display:flex;gap:15px;flex-wrap:wrap;font-size:11px;color:#63766e}.mapLegend span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--teal);margin-right:6px}.infoPanel{background:white;border:1px solid var(--line);border-radius:20px;padding:25px}.infoPanel h3{font:500 25px Georgia,serif;margin:0 0 10px}.infoPanel p{font-size:13px;color:var(--muted)}.notice{background:#fff8e9;border-left:3px solid var(--gold);padding:12px 14px;border-radius:8px;color:#77643c;font-size:11px;margin-top:14px}
+.catalogGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.miniCard{padding:18px;background:white;border:1px solid var(--line);border-radius:16px}.miniCard h3{font:600 18px Georgia,serif;margin:7px 0}.miniCard p{font-size:12px;color:var(--muted);margin:0 0 12px}.status{font-size:10px;font-weight:850;padding:5px 8px;border-radius:20px;background:#fff4dc;color:#85631c}.status.verified{background:#e7f4ed;color:#14734f}
+.planner{background:#f0f6f1}.plannerGrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:20px}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:21px}.panel h3{font:500 23px Georgia,serif;margin:0 0 16px}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.formGrid .wide{grid-column:1/-1}.activity{display:flex;justify-content:space-between;gap:12px;padding:12px;border-bottom:1px solid #edf1ee;font-size:12px}.activity:last-child{border:0}.dayLabel{font-weight:850;color:var(--green);margin:14px 0 5px}.budgetTotal{background:var(--green);color:white;border-radius:14px;padding:17px;margin-top:14px;display:flex;justify-content:space-between;align-items:center}.budgetTotal strong{font-size:22px}
+.cta{background:linear-gradient(120deg,#0b6b55,#064537);color:white;border-radius:24px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{font:500 30px Georgia,serif;margin:0 0 8px}.cta p{color:#c6ded4;margin:0;font-size:13px}.footer{background:#062f28;color:#b9cec5;padding:45px 0 22px}.footerGrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer h4{color:white;margin:0 0 12px}.footer p,.footer a{font-size:12px;color:#b9cec5}.footer a{display:block;text-decoration:none;margin:7px 0}.fine{border-top:1px solid #ffffff20;margin-top:30px;padding-top:17px;font-size:10px;color:#90aaa0}
+.modal{position:fixed;inset:0;background:#092a23a8;z-index:50;display:none;align-items:center;justify-content:center;padding:18px}.modal.show{display:flex}.modalBox{background:white;border-radius:20px;width:min(720px,100%);max-height:90vh;overflow:auto;padding:24px;position:relative}.close{position:absolute;right:18px;top:15px;border:0;background:#edf3ef;border-radius:50%;width:34px;height:34px;font-size:20px}.modalBox h2{font:500 28px Georgia,serif;margin:0 40px 18px 0}.modalBody{font-size:13px;color:#61746b}.modalBody img{width:100%;height:220px;object-fit:cover;border-radius:13px}.admin{display:none;background:#f4f7f4;padding:55px 0}.admin.show{display:block}.adminTop{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0}.tab{padding:8px 13px;border:1px solid var(--line);background:white;border-radius:9px;font-size:12px}.tab.active{background:var(--green);color:white}.tableWrap{overflow:auto;background:white;border:1px solid var(--line);border-radius:14px}table{border-collapse:collapse;width:100%;min-width:600px;font-size:12px}th,td{text-align:left;padding:13px;border-bottom:1px solid #edf1ee}th{color:#75857d;background:#f8faf8}td button{margin-right:5px}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,20px);background:#173d32;color:white;padding:11px 18px;border-radius:30px;font-size:12px;opacity:0;transition:.25s;z-index:90;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.links{display:none}.heroGrid,.twoCol,.plannerGrid{grid-template-columns:1fr}.heroVisual{min-height:340px}.grid,.catalogGrid{grid-template-columns:repeat(2,1fr)}.featureGrid{grid-template-columns:repeat(2,1fr)}.searchbar{grid-template-columns:1fr 1fr}.searchbar .btn{width:100%}}
+@media(max-width:560px){.topbar .wrap{font-size:10px}.navin{height:64px}.brand{font-size:16px}.navright .btn{display:none}.hero{padding:42px 0}.heroVisual{min-height:280px}.hero h1{font-size:43px}.heroMeta{gap:14px}.grid,.catalogGrid{grid-template-columns:1fr}.cardImg{height:210px}.featureGrid{grid-template-columns:1fr 1fr}section{padding:50px 0}.searchbar{grid-template-columns:1fr}.sectionHead{align-items:start;flex-direction:column}.formGrid{grid-template-columns:1fr}.formGrid .wide{grid-column:auto}.cta{padding:25px;display:block}.cta .btn{margin-top:18px}.footerGrid{grid-template-columns:1fr}.heroActions{flex-wrap:wrap}}
+
+/* RANUP — bespoke editorial identity */
+:root{
+ --green:#173d34;--green2:#315c4d;--mint:#e7ece3;--teal:#66877c;
+ --gold:#b99558;--ink:#1c302b;--muted:#7e8980;--paper:#f6f3eb;
+ --line:#e6e0d4;--white:#fffdf8;--shadow:0 18px 55px rgba(31,52,43,.10)
+}
+body{background:var(--paper);color:var(--ink);font-family:"Avenir Next",Avenir,Inter,system-ui,sans-serif;letter-spacing:.01em}
+.topbar{background:#173d34;color:#d9d6c8;letter-spacing:1.4px;text-transform:uppercase;font-size:9px}
+.nav{background:rgba(249,247,240,.94);border-bottom:1px solid #e7e0d4}
+.navin{height:82px}
+.brand{font-family:Georgia,serif;letter-spacing:2.8px;font-size:22px;color:#173d34}
+.brandmark{background:#173d34;color:#d8bd83;border-radius:50%;width:39px;height:39px;font-size:19px}
+.links a{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#53655c}
+.btn{background:#173d34;border-radius:3px;box-shadow:none;letter-spacing:1px;text-transform:uppercase;font-size:10px;padding:13px 19px}
+.btn:hover{background:#315c4d;transform:translateY(-2px)}
+.btn.outline{border-radius:3px;border-color:#b9c2b8;background:transparent}
+.btn.gold{background:#b99558;color:#182f28}
+.selectlang{border-radius:2px;border-color:#d8d2c5;background:transparent;font-size:11px}
+.hero{padding:72px 0 78px;background:#eeeae0;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 26px,rgba(185,149,88,.045) 27px 28px);pointer-events:none}
+.heroGrid{position:relative;gap:6vw}
+.eyebrow{font-size:9px;letter-spacing:2.8px;color:#9a7843}
+.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(54px,6.5vw,88px);line-height:.98;letter-spacing:-3px;color:#173d34;margin:20px 0 22px}
+.hero h1 em{color:#a47e45;font-style:italic}
+.hero p{font-family:Georgia,serif;font-size:17px;line-height:1.65;color:#66766c;max-width:460px}
+.heroMeta{border-top:1px solid #d6d0c4;padding-top:18px;margin-top:35px;gap:34px}
+.heroMeta b{font-family:Georgia,serif;font-size:25px;font-weight:400;color:#173d34}
+.heroVisual{min-height:470px}
+.heroPhoto{inset:0 22px 24px 18px;border-radius:2px;background-image:linear-gradient(0deg,#102f2a55,transparent 45%),url('https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Baiturrahman_Aceh.jpg?width=1400');box-shadow:18px 18px 0 #d8c9a8}
+.heroPhoto:after{inset:14px;border:1px solid #f4ead4a8;border-radius:0}
+.floatTag{border-radius:2px;box-shadow:0 10px 30px #19382b1c;background:#fbf8f0}
+.floatTag strong{font-family:Georgia,serif;font-size:16px;font-weight:500;color:#173d34}
+.tag1{left:-8px;bottom:2px}.tag2{right:-4px;top:24px}
+section{padding:82px 0}
+.sectionHead h2{font-family:Georgia,serif;font-size:clamp(32px,3.6vw,46px);font-weight:400;letter-spacing:-1.1px;color:#173d34}
+.sectionHead p{font-family:Georgia,serif;font-size:14px;color:#7d877d}
+.searchbar{border-radius:3px;border-color:#e0d9cc;box-shadow:0 12px 30px #243c2d0b;padding:15px}
+.field label{letter-spacing:1.5px;font-size:9px;color:#9a8c73}
+.field input,.field select,.field textarea{border-radius:2px;background:#fbfaf6;border-color:#e7e1d6;font-size:12px}
+.chip{border-radius:2px;text-transform:uppercase;letter-spacing:1px;font-size:9px;padding:9px 13px;background:transparent}
+.chip.active,.chip:hover{background:#173d34;border-color:#173d34}
+.grid{gap:24px}
+.card{border-radius:2px;background:#fffdf8;border:1px solid #e7e1d6;box-shadow:none}
+.card:hover{transform:translateY(-5px);box-shadow:0 18px 40px #173d3414}
+.cardImg{height:220px;border-radius:0;filter:saturate(.82)}
+.pill{border-radius:0;left:0;top:auto;bottom:0;background:#f6f3eb;color:#173d34;padding:8px 12px;letter-spacing:1.4px;text-transform:uppercase;font-size:9px}
+.fav{border-radius:0;background:#f6f3ebd9;color:#173d34}
+.cardBody{padding:20px}
+.cardMeta{letter-spacing:1px;text-transform:uppercase;font-size:9px}
+.card h3{font:400 24px/1.15 Georgia,serif;color:#173d34}
+.card p{font-family:Georgia,serif;font-size:13px;line-height:1.5}
+.cardFoot{font-size:10px;letter-spacing:.5px}
+.price{font-family:Georgia,serif;font-size:15px;font-weight:500}
+.featureBand{background:#173d34;position:relative;overflow:hidden}
+.featureBand:after{content:"✳";position:absolute;right:4%;top:8%;font-size:180px;color:#ffffff08}
+.featureBand .sectionHead h2{font-family:Georgia,serif;font-weight:400}
+.feature{border-radius:2px;background:#ffffff08;border-color:#ffffff20;padding:23px}
+.feature .ico{color:#d3b77d}
+.feature h3{font-family:Georgia,serif;font-weight:400;font-size:18px}
+.feature p{font-family:Georgia,serif;font-size:12px;line-height:1.6}
+.mapBox{border-radius:2px;background:#e9ece3;border:1px solid #d9dfd4}
+.infoPanel,.miniCard,.panel{border-radius:2px;background:#fffdf8;border-color:#e7e1d6;box-shadow:none}
+.infoPanel h3,.panel h3{font-family:Georgia,serif;font-weight:400}
+.miniCard h3{font-family:Georgia,serif;font-weight:400;font-size:22px}
+.status{border-radius:0;letter-spacing:.4px}
+.planner{background:#ecefe8}
+.budgetTotal{background:#173d34;border-radius:2px}
+.cta{background:#173d34;border-radius:2px;position:relative;overflow:hidden}
+.cta:after{content:"✳";position:absolute;right:20%;font-size:140px;color:#ffffff0b;top:-38px;pointer-events:none}
+.cta h2{font-family:Georgia,serif;font-weight:400}
+.footer{background:#102f2a}
+.footer .brand{color:#f4f0e6}
+.modalBox{border-radius:2px;background:#fbf8f0}
+.close{border-radius:2px}
+.tab{border-radius:2px}
+.tab.active{background:#173d34}
+.tableWrap{border-radius:2px}
+.admin{background:#ecefe8}
+@media(max-width:560px){
+ .hero{padding:48px 0}.hero h1{font-size:53px;letter-spacing:-2px}
+ .heroVisual{min-height:300px}.heroPhoto{inset:0 12px 15px 10px}
+ section{padding:58px 0}
+ .brand{font-size:19px}
+}
+
+
+/* RANUP — Tidal Nocturne palette: an entirely different coastal editorial direction */
+:root{
+ --green:#1F3442;       /* Ink Navy */
+ --green2:#536D79;      /* Atlantic Slate */
+ --mint:#D8E2DF;        /* Sea Mist */
+ --teal:#6F8990;
+ --gold:#B9775E;        /* Burnished Copper */
+ --ink:#253743;
+ --muted:#78858A;
+ --paper:#F3EFE7;       /* Salt Linen */
+ --line:#E2DCD2;
+ --white:#FBF9F4;
+ --shadow:0 18px 55px rgba(31,52,66,.11)
+}
+body{background:var(--paper);color:var(--ink)}
+.topbar{background:#1F3442;color:#E2E8E5}
+.nav{background:rgba(248,246,240,.96);border-bottom-color:#ded8ce}
+.brand{color:#1F3442}
+.brandmark{background:#1F3442;color:#D9B4A3}
+.links a{color:#5C6C73}
+.links a:hover{color:#B9775E}
+.btn{background:#1F3442;color:#F8F5EE}
+.btn:hover{background:#536D79}
+.btn.outline{color:#1F3442;border-color:#AAB8BA;background:transparent}
+.btn.gold{background:#B9775E;color:#fffaf5}
+.selectlang{color:#1F3442;border-color:#D5CEC3}
+.hero{background:#E9E7E0}
+.hero:before{background:repeating-linear-gradient(135deg,transparent 0 27px,rgba(83,109,121,.055) 28px 29px)}
+.eyebrow{color:#A76651}
+.hero h1{color:#1F3442}
+.hero h1 em{color:#B9775E}
+.hero p{color:#64747B}
+.heroMeta{border-top-color:#CFCFC8}
+.heroMeta b{color:#1F3442}
+.heroPhoto{box-shadow:18px 18px 0 #B9C8C6}
+.heroPhoto:after{border-color:#F5F1E7A8}
+.floatTag{background:#FBF9F4}
+.floatTag strong{color:#1F3442}
+.ornament{color:#B9775E}
+.sectionHead h2{color:#1F3442}
+.sectionHead p{color:#78858A}
+.searchbar{border-color:#DED8CE}
+.field label{color:#8D7770}
+.field input,.field select,.field textarea{background:#FCFAF6;border-color:#E3DDD4;color:#253743}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:#6F8990}
+.chip{background:transparent;border-color:#D8D5CE;color:#62727A}
+.chip.active,.chip:hover{background:#1F3442;border-color:#1F3442;color:#F8F5EE}
+.card{background:#FBF9F4;border-color:#E3DDD4}
+.card:hover{box-shadow:0 18px 40px rgba(31,52,66,.13)}
+.pill{background:#F3EFE7;color:#1F3442}
+.fav{background:#F3EFE7;color:#536D79}
+.fav.on{color:#B45F59}
+.cardMeta{color:#829096}
+.card h3{color:#1F3442}
+.card p{color:#758188}
+.cardFoot{border-top-color:#EAE5DC;color:#78858A}
+.price{color:#A76651}
+.featureBand{background:#1F3442}
+.featureBand:after{color:#D9B4A308}
+.featureBand .sectionHead h2{color:#F3EFE7}
+.featureBand .sectionHead p{color:#C3D0D0}
+.feature{background:#FFFFFF08;border-color:#FFFFFF20}
+.feature .ico{color:#D9B4A3}
+.feature h3{color:#F3EFE7}
+.feature p{color:#C3D0D0}
+.mapBox{background:#E2EAE6;border-color:#C9D5D1}
+.mapLegend{color:#64777C}
+.infoPanel,.miniCard,.panel{background:#FBF9F4;border-color:#E3DDD4}
+.infoPanel h3,.panel h3,.miniCard h3{color:#1F3442}
+.status{background:#F2E5DF;color:#955B49}
+.status.verified{background:#E1EBE7;color:#426A65}
+.planner{background:#E8ECE8}
+.budgetTotal{background:#1F3442}
+.cta{background:#1F3442}
+.cta:after{color:#FFFFFF09}
+.cta h2{color:#F3EFE7}
+.cta p{color:#C3D0D0}
+.footer{background:#172A36}
+.footer .brand{color:#F3EFE7}
+.footer .brandmark{background:#F3EFE7;color:#B9775E}
+.footer p,.footer a{color:#C0CCCD}
+.fine{border-top-color:#FFFFFF22;color:#9DADB0}
+.modalBox{background:#FBF9F4}
+.close{background:#E6ECE9;color:#1F3442}
+.tab{border-color:#DDD8CF;background:#FBF9F4;color:#536D79}
+.tab.active{background:#1F3442;color:#F3EFE7}
+.tableWrap{border-color:#E3DDD4}
+th{background:#F0EEE8;color:#687A80}
+td{border-bottom-color:#ECE7DF}
+.admin{background:#E8ECE8}
+.notice{background:#F5ECE6;border-left-color:#B9775E;color:#795D53}
+.toast{background:#1F3442}
+@media(max-width:560px){
+ .hero{background:#E9E7E0}
+}
+
+</style>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+<style>
+#ranupMap .leaflet-popup-content-wrapper{border-radius:3px;background:#fbf9f4;color:#253743}
+#ranupMap .leaflet-popup-content{font:12px/1.5 system-ui,sans-serif}
+#ranupMap .leaflet-popup-content a{color:#a76651;font-weight:700}
+#ranupMap .leaflet-control-zoom a{color:#1f3442}
+.mapNote{font-size:10px;color:#758188}
+.leaflet-container{font-family:inherit}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>✦ COASTAL STORIES · A QUIETER WAY TO DISCOVER</span><span id="topNote">Informasi demo • Verifikasi sebelum perjalanan</span></div></div>
+<header class="nav"><div class="wrap navin">
+<a class="brand" href="#"><span class="brandmark">✺</span><span>RANUP<span style="color:var(--gold)">.</span><small style="display:block;font:8px/1.2 Arial,sans-serif;letter-spacing:2px;color:#9a8866;margin-top:2px">THE ART OF DISCOVERING ACEH</small></span></a>
+<nav class="links"><a href="#destinations" data-i18n="navDest">Destinasi</a><a href="#culinary" data-i18n="navFood">Kuliner</a><a href="#stay" data-i18n="navStay">Akomodasi</a><a href="#planner" data-i18n="navPlan">Rencana Perjalanan</a></nav>
+<div class="navright"><select class="selectlang" id="lang" aria-label="Language"><option value="id">ID</option><option value="en">EN</option></select><button class="btn small" onclick="document.querySelector('#destinations').scrollIntoView()">Explore Aceh ↗</button></div>
+</div></header>
+<main>
+<section class="hero"><div class="wrap heroGrid"><div>
+<div class="eyebrow">A TRAVEL JOURNAL FROM ACEH</div><h1 id="heroTitle">Aceh, beyond<br><em>the ordinary.</em></h1>
+<p id="heroDesc">A thoughtful journey through heritage, nature, and Muslim-friendly experiences. Discover the soul of Aceh at your own pace.</p>
+<div class="heroActions"><button class="btn" onclick="document.querySelector('#destinations').scrollIntoView()">Temukan Destinasi <span>↗</span></button><button class="btn outline" onclick="document.querySelector('#planner').scrollIntoView()">Rencanakan Trip</button></div>
+<div class="heroMeta"><div><b>5</b>Wilayah pilihan</div><div><b>12+</b>Inspirasi destinasi</div><div><b>1–5</b>Hari perjalanan</div></div>
+</div><div class="heroVisual"><div class="heroPhoto"></div><div class="floatTag tag1">✦ <strong>The Verandah of Mecca</strong>Heritage, warmth & belonging</div><div class="floatTag tag2">☾ <strong>Muslim-friendly</strong>Informasi fasilitas ibadah</div><div class="ornament">✧</div></div></div></section>
+
+<section id="destinations"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">CURATED DESTINATIONS</div><h2>Temukan sisi terbaik Aceh</h2><p>Pilih tempat, ikuti rasa ingin tahu, dan mulai petualanganmu.</p></div><a class="textlink" href="#map">Lihat peta ilustratif ↗</a></div>
+<div class="searchbar"><div class="field"><label>Cari destinasi</label><input id="search" placeholder="Contoh: Masjid Raya, Sabang..."></div><div class="field"><label>Wilayah</label><select id="region"><option value="">Semua wilayah</option><option>Banda Aceh</option><option>Sabang</option><option>Aceh Besar</option><option>Aceh Tengah</option><option>Bener Meriah</option></select></div><div class="field"><label>Urutkan</label><select id="sort"><option value="featured">Pilihan editor</option><option value="name">Nama A–Z</option><option value="cost">Biaya terendah</option></select></div><button class="btn" onclick="renderDestinations()">Cari ↗</button></div>
+<div class="chips" id="categoryChips"></div><div class="grid" id="destinationGrid"></div></div></section>
+
+<section class="featureBand"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow" style="color:#e2c274">TRAVEL WITH PEACE OF MIND</div><h2>Lebih dari sekadar perjalanan.</h2><p>Informasi yang membantu perjalanan terasa lebih terencana.</p></div></div><div class="featureGrid">
+<div class="feature"><div class="ico">☾</div><h3>Fasilitas Ibadah</h3><p>Temukan informasi masjid, musala, dan fasilitas ibadah di sekitar destinasi.</p></div>
+<div class="feature"><div class="ico">✓</div><h3>Transparansi Halal</h3><p>Status sertifikasi ditampilkan terpisah dari klaim ramah Muslim.</p></div>
+<div class="feature"><div class="ico">⌖</div><h3>Rute Praktis</h3><p>Tautan peta membantu kamu membuka navigasi eksternal.</p></div>
+<div class="feature"><div class="ico">♡</div><h3>Simpan Favorit</h3><p>Kumpulkan destinasi dan susun perjalanan versimu sendiri.</p></div>
+</div></div></section>
+
+<section id="map"><div class="wrap twoCol"><div><div class="eyebrow">EXPLORE THE REGION</div><h2 style="font:500 38px Georgia,serif;margin:9px 0">Lima wilayah, banyak cerita.</h2><p style="color:var(--muted);font-size:13px">Peta interaktif menggunakan OpenStreetMap dan membutuhkan koneksi internet. Pin adalah titik referensi destinasi; verifikasi alamat dan titik akhir sebelum perjalanan.</p><div class="mapLegend"><span>Destinasi contoh</span><span>Wilayah cakupan</span></div></div>
+<div class="mapBox" style="padding:12px">
+<div id="ranupMap" role="application" aria-label="Peta interaktif destinasi RANUP" style="height:360px;width:100%;border-radius:2px;z-index:1"></div>
+<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 3px 2px;font-size:10px;color:#64777c">
+<span>● Titik referensi destinasi · verifikasi lapangan diperlukan</span><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap ↗</a>
+</div></div></div></section>
+
+<section id="culinary" style="background:#f5f8f4"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">TASTE OF ACEH</div><h2>Kuliner & produk lokal</h2><p>Kenali cita rasa Aceh dan dukung pelaku UMKM setempat.</p></div></div><div class="catalogGrid" id="foodGrid"></div><div class="notice">Status sertifikasi halal pada katalog merupakan data contoh. Periksa dokumen dan sumber resmi sebelum membeli. Label “ramah Muslim” tidak sama dengan sertifikat halal resmi.</div></div></section>
+
+<section id="stay"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">REST & RECHARGE</div><h2>Akomodasi ramah Muslim</h2><p>Contoh informasi penginapan dan fasilitas pendukung perjalanan.</p></div></div><div class="catalogGrid" id="stayGrid"></div></div></section>
+
+<section class="planner" id="planner"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">YOUR JOURNEY, YOUR WAY</div><h2>Rancang perjalananmu</h2><p>Susun itinerary 1–5 hari dan hitung estimasi anggaran sederhana.</p></div></div>
+<div class="plannerGrid"><div class="panel"><h3>Detail perjalanan</h3><div class="formGrid">
+<div class="field wide"><label>Nama perjalanan</label><input id="tripName" value="Liburan The Verandah of Mecca"></div>
+<div class="field"><label>Tanggal mulai</label><input id="tripDate" type="date"></div>
+<div class="field"><label>Durasi (hari)</label><select id="tripDays"><option>1</option><option>2</option><option selected>3</option><option>4</option><option>5</option></select></div>
+<div class="field"><label>Jumlah wisatawan</label><input id="travellers" type="number" min="1" value="2"></div>
+<div class="field"><label>Budget / orang (Rp)</label><input id="budget" type="number" min="0" value="1500000"></div>
+<div class="field wide"><label>Minat perjalanan</label><select id="interest"><option value="all">Semua minat</option><option>Religi</option><option>Alam</option><option>Bahari</option><option>Sejarah</option><option>Budaya</option><option>Kuliner</option></select></div>
+<div class="field wide"><button class="btn" style="width:100%" onclick="buildItinerary()">Buat itinerary otomatis ✦</button></div>
+</div><div class="notice">Anggaran bersifat simulasi dan belum mencakup seluruh biaya aktual, perubahan harga, atau biaya transportasi antarkota.</div></div>
+<div class="panel"><h3 id="itineraryTitle">Itinerary perjalanan</h3><div id="itineraryOutput"><div class="empty">Isi detail perjalanan lalu pilih “Buat itinerary otomatis”.</div></div><div class="budgetTotal"><div><small>Estimasi total perjalanan</small><div style="font-size:10px;opacity:.75">Berdasarkan input simulasi</div></div><strong id="totalBudget">Rp0</strong></div><div style="display:flex;gap:8px;margin-top:13px"><button class="btn small outline" onclick="saveTrip()">Simpan itinerary</button><button class="btn small outline" onclick="window.print()">Cetak</button></div></div>
+</div></div></section>
+
+<section id="packages"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow">CURATED JOURNEYS</div><h2>Paket wisata pilihan</h2><p>Rekomendasi rule-based berdasarkan minat dan kisaran anggaran.</p></div></div><div class="catalogGrid" id="packageGrid"></div></div></section>
+
+<section><div class="wrap"><div class="cta"><div><h2>Jelajah Aceh dimulai dari sini.</h2><p>Simpan tempat favorit, rencanakan rute, dan temukan pengalaman baru.</p></div><button class="btn gold" onclick="showFavorites()">Lihat favorit ♡</button></div></div></section>
+<section class="admin" id="admin"><div class="wrap"><div class="adminTop"><div><div class="eyebrow">DEMO CONTENT MANAGEMENT</div><h2 style="font:500 32px Georgia,serif;margin:6px 0">Dashboard Pengelola</h2><p style="font-size:12px;color:var(--muted);margin:0">Mode demo lokal • tidak memerlukan akun atau backend.</p></div><button class="btn outline small" onclick="toggleAdmin(false)">Tutup dashboard ✕</button></div>
+<div class="tabs" id="adminTabs"><button class="tab active" data-type="destinations">Destinasi</button><button class="tab" data-type="foods">Kuliner</button><button class="tab" data-type="stays">Akomodasi</button><button class="tab" data-type="packages">Paket wisata</button></div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0"><b id="tableTitle">Data destinasi</b><button class="btn small" onclick="openEditor()">+ Tambah data</button></div><div class="tableWrap"><table><thead id="tableHead"></thead><tbody id="tableBody"></tbody></table></div>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footerGrid"><div><div class="brand" style="color:white"><span class="brandmark">✺</span>RANUP <span style="color:var(--gold)">.</span></div><p>A considered travel journal to explore Aceh’s heritage, landscapes, local flavours, and Muslim-friendly experiences. Jelajahi dengan rasa ingin tahu, rencanakan dengan informasi yang lebih baik.</p></div><div><h4>Jelajahi</h4><a href="#destinations">Destinasi wisata</a><a href="#culinary">Kuliner lokal</a><a href="#stay">Akomodasi</a><a href="#planner">Itinerary planner</a></div><div><h4>Pengelola</h4><a href="#admin" onclick="toggleAdmin(true)">Dashboard demo CRUD</a><a href="#map">Peta interaktif</a><a href="#" onclick="showPhotoCredits();return false">Kredit fotografi</a><a href="#top">Kembali ke atas ↑</a></div></div><div class="fine">© 2026 RANUP · Prototype pelatihan Enkraf CHAT. Foto destinasi: Wikimedia Commons (lihat kredit foto). Peta: © OpenStreetMap contributors (atribusi ditampilkan pada peta). Data, harga, kontak, foto, dan status pada prototype ini merupakan contoh/simulasi kecuali dinyatakan dan diverifikasi secara terpisah.</div></div></footer>
+
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalBox"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div><div class="toast" id="toast"></div>
+<script>
+const img=(id)=>`https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=80`;
+const seedDest=[
+{id:'d1',nama:'Masjid Raya Baiturrahman',kategori:'Religi',wilayah:'Banda Aceh',deskripsi:'Ikon kota Banda Aceh dengan arsitektur megah dan nilai sejarah yang kuat.',imageUrl:img('photo-1564769625905-50e93615e769'),alamat:'Kota Banda Aceh, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Masjid+Raya+Baiturrahman',estimasiBiaya:0,fasilitas:['Area parkir','Area publik'],fasilitasIbadah:['Masjid','Tempat wudu'],unggulan:true},
+{id:'d2',nama:'Museum Tsunami Aceh',kategori:'Sejarah',wilayah:'Banda Aceh',deskripsi:'Ruang edukasi dan refleksi tentang bencana tsunami 2004 serta ketangguhan masyarakat Aceh.',imageUrl:img('photo-1565060169194-19fabf63012b'),alamat:'Banda Aceh, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Museum+Tsunami+Aceh',estimasiBiaya:15000,fasilitas:['Area edukasi','Ruang pamer'],fasilitasIbadah:['Musala (perlu konfirmasi)'],unggulan:true},
+{id:'d3',nama:'Gunongan',kategori:'Sejarah',wilayah:'Banda Aceh',deskripsi:'Situs peninggalan Kesultanan Aceh yang menjadi bagian penting lanskap sejarah kota.',imageUrl:img('photo-1518005020951-eccb494ad742'),alamat:'Banda Aceh, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Gunongan+Banda+Aceh',estimasiBiaya:5000,fasilitas:['Area taman'],fasilitasIbadah:['Masjid sekitar (cek lokasi)'],unggulan:false},
+{id:'d4',nama:'Pantai Iboih',kategori:'Bahari',wilayah:'Sabang',deskripsi:'Kawasan pantai dengan air jernih dan akses menuju pengalaman bahari Pulau Weh.',imageUrl:img('photo-1500375592092-40eb2168fd21'),alamat:'Iboih, Sukakarya, Sabang',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Pantai+Iboih+Sabang',estimasiBiaya:25000,fasilitas:['Area pantai','Penyewaan aktivitas (cek operator)'],fasilitasIbadah:['Fasilitas ibadah sekitar perlu dikonfirmasi'],unggulan:true},
+{id:'d5',nama:'Tugu Kilometer Nol',kategori:'Alam',wilayah:'Sabang',deskripsi:'Penanda geografis ujung barat Indonesia dengan panorama laut lepas.',imageUrl:img('photo-1500530855697-b586d89ba3ee'),alamat:'Iboih, Sabang, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Tugu+Kilometer+Nol+Sabang',estimasiBiaya:10000,fasilitas:['Area pandang','Spot foto'],fasilitasIbadah:['Fasilitas ibadah terdekat perlu dikonfirmasi'],unggulan:true},
+{id:'d6',nama:'Pantai Lampuuk',kategori:'Bahari',wilayah:'Aceh Besar',deskripsi:'Pantai berpasir cerah dengan garis pantai yang populer untuk menikmati suasana pesisir.',imageUrl:img('photo-1473116763249-2ffaa01cf1c8'),alamat:'Lhoknga, Aceh Besar',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Pantai+Lampuuk',estimasiBiaya:10000,fasilitas:['Area pantai','Warung (data contoh)'],fasilitasIbadah:['Masjid sekitar (cek ketersediaan)'],unggulan:false},
+{id:'d7',nama:'Air Terjun Suhom',kategori:'Alam',wilayah:'Aceh Besar',deskripsi:'Destinasi alam dengan suasana hijau dan aliran air di kawasan pegunungan.',imageUrl:img('photo-1432405972618-c60b0225b8f9'),alamat:'Lhoong, Aceh Besar',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Air+Terjun+Suhom',estimasiBiaya:10000,fasilitas:['Area alam terbuka'],fasilitasIbadah:['Perlu konfirmasi fasilitas ibadah'],unggulan:false},
+{id:'d8',nama:'Danau Lut Tawar',kategori:'Alam',wilayah:'Aceh Tengah',deskripsi:'Danau dataran tinggi yang dikelilingi perbukitan dan lanskap khas Takengon.',imageUrl:img('photo-1470770841072-f978cf4d019e'),alamat:'Takengon, Aceh Tengah',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Danau+Lut+Tawar',estimasiBiaya:15000,fasilitas:['Area tepi danau','Wisata perahu (cek operator)'],fasilitasIbadah:['Masjid di kawasan sekitar (cek lokasi)'],unggulan:true},
+{id:'d9',nama:'Pantan Terong',kategori:'Alam',wilayah:'Aceh Tengah',deskripsi:'Titik pandang di dataran tinggi untuk menikmati panorama Kota Takengon dan Danau Lut Tawar.',imageUrl:img('photo-1464822759023-fed622ff2c3b'),alamat:'Takengon, Aceh Tengah',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Pantan+Terong',estimasiBiaya:10000,fasilitas:['Area pandang','Spot foto'],fasilitasIbadah:['Perlu konfirmasi fasilitas ibadah'],unggulan:false},
+{id:'d10',nama:'Air Terjun Tansaran Bidin',kategori:'Alam',wilayah:'Bener Meriah',deskripsi:'Alternatif wisata alam dengan lanskap perbukitan dan suasana pedesaan.',imageUrl:img('photo-1441974231531-c6227db76b6e'),alamat:'Bener Meriah, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Air+Terjun+Tansaran+Bidin',estimasiBiaya:10000,fasilitas:['Area alam terbuka'],fasilitasIbadah:['Perlu konfirmasi fasilitas ibadah'],unggulan:false},
+{id:'d11',nama:'Kampung Kopi / Wisata Kopi Gayo',kategori:'Budaya',wilayah:'Bener Meriah',deskripsi:'Pengalaman mengenal kopi Gayo, proses pengolahan, dan cerita komunitas penghasil kopi.',imageUrl:img('photo-1442512595331-e89e73853f31'),alamat:'Bener Meriah, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Wisata+Kopi+Gayo+Bener+Meriah',estimasiBiaya:30000,fasilitas:['Edukasi kopi','Produk lokal'],fasilitasIbadah:['Fasilitas ibadah perlu dikonfirmasi'],unggulan:true},
+{id:'d12',nama:'Kapal PLTD Apung',kategori:'Sejarah',wilayah:'Banda Aceh',deskripsi:'Situs memorial tsunami yang menghadirkan kisah dampak bencana dan pemulihan kota.',imageUrl:img('photo-1500534623283-312aade485b7'),alamat:'Banda Aceh, Aceh',mapsUrl:'https://www.google.com/maps/search/?api=1&query=Kapal+PLTD+Apung+Banda+Aceh',estimasiBiaya:10000,fasilitas:['Area memorial','Edukasi sejarah'],fasilitasIbadah:['Musala/masjid sekitar perlu dikonfirmasi'],unggulan:false}
+];
+const seedFoods=[
+{id:'f1',nama:'Mie Aceh',kategori:'Kuliner',wilayah:'Banda Aceh',harga:25000,imageUrl:img('photo-1569718212165-3a8278d5f624'),statusSertifikasiHalal:'Belum diverifikasi',sumberVerifikasi:'Belum ada dokumen pada demo',kontak:'+6281230000001'},
+{id:'f2',nama:'Kopi Gayo',kategori:'Produk UMKM',wilayah:'Bener Meriah',harga:65000,imageUrl:img('photo-1442512595331-e89e73853f31'),statusSertifikasiHalal:'Perlu konfirmasi',sumberVerifikasi:'Konfirmasi produsen/otoritas',kontak:'+6281230000002'},
+{id:'f3',nama:'Kuah Beulangong',kategori:'Kuliner',wilayah:'Aceh Besar',harga:35000,imageUrl:img('photo-1547592180-85f173990554'),statusSertifikasiHalal:'Belum diverifikasi',sumberVerifikasi:'Belum ada dokumen pada demo',kontak:'+6281230000003'},
+{id:'f4',nama:'Timphan Aceh',kategori:'Kuliner',wilayah:'Banda Aceh',harga:18000,imageUrl:img('photo-1551024506-0bc0a4b3ba4d'),statusSertifikasiHalal:'Perlu konfirmasi',sumberVerifikasi:'Konfirmasi produsen/otoritas',kontak:'+6281230000004'}
+];
+const seedStays=[
+{id:'s1',nama:'Penginapan Kota Banda Aceh (contoh)',wilayah:'Banda Aceh',hargaPerMalam:300000,fasilitas:['Wi-Fi','Parkir'],fasilitasRamahMuslim:['Arah kiblat (perlu konfirmasi)','Dekat masjid (cek lokasi)'],imageUrl:img('photo-1566073771259-6a8506099945'),kontak:'+6281230000011'},
+{id:'s2',nama:'Guesthouse Pulau Weh (contoh)',wilayah:'Sabang',hargaPerMalam:450000,fasilitas:['Area santai','Wi-Fi'],fasilitasRamahMuslim:['Informasi masjid sekitar perlu konfirmasi'],imageUrl:img('photo-1571896349842-33c89424de2d'),kontak:'+6281230000012'},
+{id:'s3',nama:'Homestay Dataran Tinggi Gayo (contoh)',wilayah:'Aceh Tengah',hargaPerMalam:275000,fasilitas:['Pemandangan alam','Parkir'],fasilitasRamahMuslim:['Fasilitas ibadah sekitar perlu konfirmasi'],imageUrl:img('photo-1449158743715-0a90ebb6d2d8'),kontak:'+6281230000013'}
+];
+const seedPackages=[
+{id:'p1',nama:'Jejak Sejarah The Verandah of Mecca',durasi:2,daftarDestinasi:['d1','d2','d12'],estimasiBiaya:650000,deskripsi:'Eksplorasi ikon religi dan sejarah Banda Aceh.'},
+{id:'p2',nama:'Bahari Pulau Weh',durasi:3,daftarDestinasi:['d4','d5'],estimasiBiaya:1400000,deskripsi:'Waktu santai menikmati pesona pesisir Sabang.'},
+{id:'p3',nama:'Highland & Coffee Escape',durasi:3,daftarDestinasi:['d8','d9','d11','d10'],estimasiBiaya:1250000,deskripsi:'Lanskap dataran tinggi dan pengalaman kopi Gayo.'}
+];
+const DBKEY='halalExploreAceh_v1';
+let db=JSON.parse(localStorage.getItem(DBKEY)||'null')||{destinations:seedDest,foods:seedFoods,stays:seedStays,packages:seedPackages,favorites:[],trips:[]};
+function persist(){localStorage.setItem(DBKEY,JSON.stringify(db))}
+
+// Foto destinasi bersumber dari Wikimedia Commons; kredit/lisensi dicantumkan pada panel kredit foto.
+const verifiedPhotoSources = {"d1": "https://commons.wikimedia.org/wiki/Special:FilePath/Masjid_Baiturrahman_Aceh.jpg?width=1200", "d2": "https://commons.wikimedia.org/wiki/Special:FilePath/Museum_tsunami_aceh.jpg?width=1200", "d4": "https://commons.wikimedia.org/wiki/Special:FilePath/Iboih_beach,_Sabang,_Aceh;_August_2010.jpg?width=1200", "d6": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantai_Lampuuk_Aceh.jpg?width=960", "d8": "https://commons.wikimedia.org/wiki/Special:FilePath/Danau_Laut_Tawar_Takengon.jpg?width=1200", "d9": "https://commons.wikimedia.org/wiki/Special:FilePath/Pantan_Terong_Aceh.jpg?width=1200", "d11": "https://commons.wikimedia.org/wiki/Special:FilePath/Coffee_Plantation_in_Takengon_Aceh_(5281850478).jpg?width=1200", "d12": "https://commons.wikimedia.org/wiki/Special:FilePath/PLTD_Apung.jpg?width=1200"};
+Object.entries(verifiedPhotoSources).forEach(([id,url])=>{const item=db.destinations.find(x=>x.id===id);if(item)item.imageUrl=url;});
+if(db.destinations.find(x=>x.id==="d3"))db.destinations.find(x=>x.id==="d3").imageUrl="https://commons.wikimedia.org/wiki/Special:FilePath/Gunongan_Aceh_Sultanate,_diambil_5_May_2026.jpg?width=1200";
+if(db.destinations.find(x=>x.id==="d5"))db.destinations.find(x=>x.id==="d5").imageUrl="https://commons.wikimedia.org/wiki/Special:FilePath/Tugu_KM_0_Sabang.png?width=1200";
+if(db.destinations.find(x=>x.id==="d7"))db.destinations.find(x=>x.id==="d7").imageUrl="https://commons.wikimedia.org/wiki/Special:FilePath/Air_terjun_mini_di_aceh_besar_-_panoramio_%281%29.jpg?width=1200";
+if(db.destinations.find(x=>x.id==="d12"))db.destinations.find(x=>x.id==="d12").imageUrl="https://commons.wikimedia.org/wiki/Special:FilePath/PLTD_Apung.jpg?width=1200";
+
+const mapCoordinates = {"d1": [5.5533, 95.3182], "d2": [5.5488, 95.3164], "d3": [5.5485, 95.316], "d4": [5.866, 95.255], "d5": [5.904, 95.257], "d6": [5.49573, 95.228928], "d7": [5.35, 95.35], "d8": [4.62, 96.85], "d9": [4.63, 96.84], "d10": [4.82, 96.72], "d11": [4.75, 96.8], "d12": [5.54, 95.315]};
+let selectedCategory='Semua',adminType='destinations',editingId=null,latestTrip=null,language='id';
+const categories=['Semua','Religi','Alam','Bahari','Sejarah','Budaya','Kuliner'];
+const money=n=>'Rp'+Number(n||0).toLocaleString('id-ID');
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2300)}
+function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function isFav(id){return db.favorites.some(x=>x.itemId===id)}
+function toggleFav(id,type='destinasi'){let i=db.favorites.findIndex(x=>x.itemId===id);if(i>=0)db.favorites.splice(i,1);else db.favorites.push({id:'fav'+Date.now(),itemId:id,tipeItem:type,tanggalDitambahkan:new Date().toISOString()});persist();renderDestinations();toast(i>=0?'Dihapus dari favorit':'Disimpan ke favorit ♡')}
+function renderChips(){document.getElementById('categoryChips').innerHTML=categories.map(c=>`<button class="chip ${c===selectedCategory?'active':''}" onclick="selectedCategory='${c}';renderChips();renderDestinations()">${c}</button>`).join('')}
+function renderDestinations(){let q=document.getElementById('search').value.toLowerCase(),r=document.getElementById('region').value,s=document.getElementById('sort').value;let a=db.destinations.filter(d=>(selectedCategory==='Semua'||d.kategori===selectedCategory)&&(!r||d.wilayah===r)&&(`${d.nama} ${d.deskripsi} ${d.wilayah}`.toLowerCase().includes(q)));if(s==='name')a.sort((x,y)=>x.nama.localeCompare(y.nama));if(s==='cost')a.sort((x,y)=>x.estimasiBiaya-y.estimasiBiaya);if(!a.length){document.getElementById('destinationGrid').innerHTML='<div class="empty">Tidak ada destinasi yang cocok. Coba ubah kata kunci atau filter.</div>';return}
+document.getElementById('destinationGrid').innerHTML=a.map(d=>`<article class="card"><div class="cardImg" style="background-image:url('${esc(d.imageUrl)}')"><span class="pill">${esc(d.kategori)}</span><button class="fav ${isFav(d.id)?'on':''}" title="Favorit" onclick="toggleFav('${d.id}')">${isFav(d.id)?'♥':'♡'}</button></div><div class="cardBody"><div class="cardMeta">⌖ ${esc(d.wilayah)} <span>·</span> ${d.unggulan?'Pilihan editor':'Destinasi'}</div><h3>${esc(d.nama)}</h3><p>${esc(d.deskripsi)}</p><div class="cardFoot"><span>Estimasi biaya</span><span class="price">${d.estimasiBiaya?money(d.estimasiBiaya):'Gratis*'}</span></div><div style="display:flex;gap:8px;margin-top:13px"><button class="btn small" onclick="detail('${d.id}')">Detail</button><a class="btn small outline" style="text-decoration:none" target="_blank" rel="noopener" href="${esc(d.mapsUrl)}">Maps ↗</a></div></div></article>`).join('')}
+function detail(id){let d=db.destinations.find(x=>x.id===id);if(!d)return;document.getElementById('modalContent').innerHTML=`<div class="eyebrow">${esc(d.kategori)} · ${esc(d.wilayah)}</div><h2>${esc(d.nama)}</h2><div class="modalBody"><img src="${esc(d.imageUrl)}" alt="${esc(d.nama)}"><p>${esc(d.deskripsi)}</p><p><b>Alamat:</b> ${esc(d.alamat)}<br><b>Estimasi biaya:</b> ${money(d.estimasiBiaya)} <small>(simulasi)</small></p><p><b>Fasilitas:</b> ${(d.fasilitas||[]).map(esc).join(', ')||'Belum tersedia'}<br><b>Fasilitas ibadah:</b> ${(d.fasilitasIbadah||[]).map(esc).join(', ')||'Perlu konfirmasi'}</p><div class="notice">Informasi fasilitas dan harga contoh perlu dikonfirmasi kepada pengelola sebelum kunjungan. Ini bukan pernyataan verifikasi resmi.</div><p><a class="btn small" target="_blank" rel="noopener" href="${esc(d.mapsUrl)}">Buka Google Maps ↗</a> <button class="btn small outline" onclick="toggleFav('${d.id}')">${isFav(d.id)?'Hapus favorit':'Simpan favorit ♡'}</button></p></div>`;openModal()}
+function openModal(){document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
+function renderCatalogs(){document.getElementById('foodGrid').innerHTML=db.foods.map(f=>`<div class="miniCard"><div style="height:130px;border-radius:11px;background:url('${esc(f.imageUrl)}') center/cover"></div><div style="margin-top:12px"><span class="status">${esc(f.statusSertifikasiHalal)}</span></div><h3>${esc(f.nama)}</h3><p>${esc(f.wilayah)} · Harga contoh ${money(f.harga)}</p><p style="font-size:10px">Sumber: ${esc(f.sumberVerifikasi)}</p><a class="textlink" href="https://wa.me/${f.kontak.replace(/\D/g,'')}" target="_blank" rel="noopener">Hubungi UMKM ↗</a></div>`).join('');
+document.getElementById('stayGrid').innerHTML=db.stays.map(s=>`<div class="miniCard"><div style="height:130px;border-radius:11px;background:url('${esc(s.imageUrl)}') center/cover"></div><h3>${esc(s.nama)}</h3><p>${esc(s.wilayah)} · <b style="color:var(--green)">${money(s.hargaPerMalam)}</b> / malam (simulasi)</p><p>Fasilitas: ${s.fasilitas.map(esc).join(', ')}</p><p>Ramah Muslim: ${s.fasilitasRamahMuslim.map(esc).join(', ')}</p><a class="textlink" href="https://wa.me/${s.kontak.replace(/\D/g,'')}" target="_blank" rel="noopener">Kontak penyedia ↗</a></div>`).join('')}
+function renderPackages(){let interest=document.getElementById('interest')?.value||'all',budget=Number(document.getElementById('budget')?.value||0);let arr=db.packages.filter(p=>{let ds=p.daftarDestinasi.map(id=>db.destinations.find(d=>d.id===id)).filter(Boolean);return (interest==='all'||ds.some(d=>d.kategori===interest))&&(!budget||p.estimasiBiaya<=budget)});if(!arr.length)arr=db.packages;document.getElementById('packageGrid').innerHTML=arr.map(p=>`<div class="miniCard"><span class="status verified">${p.durasi} hari</span><h3>${esc(p.nama)}</h3><p>${esc(p.deskripsi)}</p><p>${p.daftarDestinasi.map(id=>db.destinations.find(d=>d.id===id)?.nama).filter(Boolean).map(esc).join(' · ')}</p><b style="color:var(--green)">${money(p.estimasiBiaya)}</b> <small>/ orang · simulasi</small><div style="margin-top:13px"><button class="btn small" onclick="usePackage('${p.id}')">Pilih paket</button></div></div>`).join('')}
+function usePackage(id){let p=db.packages.find(x=>x.id===id);if(!p)return;document.getElementById('tripDays').value=Math.min(5,p.durasi);let d=p.daftarDestinasi.map(id=>db.destinations.find(x=>x.id===id)).filter(Boolean);latestTrip={name:p.nama,days:Number(document.getElementById('tripDays').value),activities:d.map((x,i)=>({day:Math.min(i+1,Number(document.getElementById('tripDays').value)),name:x.nama,region:x.wilayah,cost:x.estimasiBiaya}))};renderTrip(latestTrip,p.estimasiBiaya*Number(document.getElementById('travellers').value||1));document.getElementById('planner').scrollIntoView();toast('Paket dimuat ke itinerary')}
+function buildItinerary(){let days=Number(document.getElementById('tripDays').value),n=Math.max(1,Number(document.getElementById('travellers').value)||1),budget=Math.max(0,Number(document.getElementById('budget').value)||0),interest=document.getElementById('interest').value;let picks=db.destinations.filter(d=>interest==='all'||d.kategori===interest);if(!picks.length)picks=db.destinations;let acts=[];for(let i=0;i<days;i++){let first=picks[(i*2)%picks.length],second=picks[(i*2+1)%picks.length];acts.push({day:i+1,name:first.nama,region:first.wilayah,cost:first.estimasiBiaya});if(second&&second.id!==first.id)acts.push({day:i+1,name:second.nama,region:second.wilayah,cost:second.estimasiBiaya})}let perPerson=acts.reduce((s,a)=>s+a.cost,0)+days*150000;latestTrip={name:document.getElementById('tripName').value,days,activities:acts,date:document.getElementById('tripDate').value,travellers:n,budget:perPerson*n};renderTrip(latestTrip,latestTrip.budget);renderPackages();toast('Itinerary berhasil dibuat')}
+function renderTrip(t,total){document.getElementById('itineraryTitle').textContent=t.name||'Itinerary perjalanan';let out='';for(let d=1;d<=t.days;d++){let items=t.activities.filter(a=>a.day===d);out+=`<div class="dayLabel">HARI ${d}</div>`+(items.length?items.map(a=>`<div class="activity"><span><b>${esc(a.name)}</b><br><small>${esc(a.region)}</small></span><b>${money(a.cost)}</b></div>`).join(''):'<div class="activity">Waktu bebas / perjalanan antarlokasi</div>')}document.getElementById('itineraryOutput').innerHTML=out;document.getElementById('totalBudget').textContent=money(total)}
+function saveTrip(){if(!latestTrip){toast('Buat itinerary terlebih dahulu');return}db.trips.push({id:'t'+Date.now(),namaPerjalanan:latestTrip.name,tanggalMulai:latestTrip.date||'',jumlahHari:latestTrip.days,jumlahWisatawan:Number(document.getElementById('travellers').value||1),daftarAktivitas:latestTrip.activities,totalAnggaran:Number(String(document.getElementById('totalBudget').textContent).replace(/\D/g,''))});persist();toast('Itinerary disimpan di perangkat ini')}
+function showFavorites(){let fav=db.favorites.map(f=>db.destinations.find(d=>d.id===f.itemId)).filter(Boolean);document.getElementById('modalContent').innerHTML=`<div class="eyebrow">SAVED PLACES</div><h2>Destinasi favoritmu</h2><div class="modalBody">${fav.length?fav.map(d=>`<div class="activity"><span><b>${esc(d.nama)}</b><br><small>${esc(d.wilayah)}</small></span><button class="btn small outline" onclick="closeModal();detail('${d.id}')">Detail</button></div>`).join(''):'<p>Belum ada destinasi favorit. Tekan ikon ♡ pada kartu destinasi untuk menyimpannya.</p>'}</div>`;openModal()}
+function toggleAdmin(open){document.getElementById('admin').classList.toggle('show',open);if(open){document.getElementById('admin').scrollIntoView();renderAdmin()}}
+const types={destinations:{label:'destinasi',fields:['nama','kategori','wilayah','deskripsi','estimasiBiaya','alamat','mapsUrl'],headers:['Nama','Kategori','Wilayah','Estimasi biaya','Aksi']},foods:{label:'kuliner',fields:['nama','kategori','wilayah','harga','statusSertifikasiHalal','sumberVerifikasi','kontak'],headers:['Nama','Wilayah','Harga','Status halal','Aksi']},stays:{label:'akomodasi',fields:['nama','wilayah','hargaPerMalam','kontak'],headers:['Nama','Wilayah','Harga/malam','Kontak','Aksi']},packages:{label:'paket wisata',fields:['nama','durasi','estimasiBiaya','deskripsi'],headers:['Nama','Durasi','Estimasi biaya','Aksi']}};
+function renderAdmin(){document.querySelectorAll('#adminTabs .tab').forEach(b=>b.classList.toggle('active',b.dataset.type===adminType));let conf=types[adminType],arr=db[adminType];document.getElementById('tableTitle').textContent='Data '+conf.label;document.getElementById('tableHead').innerHTML='<tr>'+conf.headers.map(h=>`<th>${h}</th>`).join('')+'</tr>';document.getElementById('tableBody').innerHTML=arr.map(x=>`<tr>${(adminType==='destinations'?[x.nama,x.kategori,x.wilayah,money(x.estimasiBiaya)]:adminType==='foods'?[x.nama,x.wilayah,money(x.harga),x.statusSertifikasiHalal]:adminType==='stays'?[x.nama,x.wilayah,money(x.hargaPerMalam),x.kontak]:[x.nama,x.durasi+' hari',money(x.estimasiBiaya)]).map(v=>`<td>${esc(v)}</td>`).join('')}<td><button class="btn small outline" onclick="openEditor('${x.id}')">Edit</button><button class="btn small" style="background:#a8473d" onclick="deleteItem('${x.id}')">Hapus</button></td></tr>`).join('')}
+function openEditor(id=''){editingId=id;let conf=types[adminType],obj=id?db[adminType].find(x=>x.id===id):{};let inputs=conf.fields.map(f=>{let val=obj[f]??'';return `<div class="field"><label>${f}</label>${['deskripsi','alamat','mapsUrl','sumberVerifikasi'].includes(f)?`<textarea name="${f}">${esc(val)}</textarea>`:`<input name="${f}" value="${esc(val)}" ${['estimasiBiaya','harga','hargaPerMalam','durasi'].includes(f)?'type="number"':''}>`}</div>`}).join('');document.getElementById('modalContent').innerHTML=`<h2>${id?'Edit':'Tambah'} ${conf.label}</h2><form id="editForm"><div class="formGrid">${inputs}</div><div style="display:flex;gap:8px;margin-top:18px"><button class="btn" type="submit">Simpan</button><button class="btn outline" type="button" onclick="closeModal()">Batal</button></div></form>`;openModal();document.getElementById('editForm').onsubmit=e=>{e.preventDefault();let data=Object.fromEntries(new FormData(e.target));for(let k of ['estimasiBiaya','harga','hargaPerMalam','durasi'])if(data[k]!==undefined)data[k]=Number(data[k]||0);if(adminType==='destinations'){data.fasilitas=obj.fasilitas||[];data.fasilitasIbadah=obj.fasilitasIbadah||[];data.unggulan=obj.unggulan||false;data.imageUrl=obj.imageUrl||'';data.mapsUrl=data.mapsUrl||'#'}if(adminType==='foods'){data.imageUrl=obj.imageUrl||''}if(adminType==='stays'){data.fasilitas=obj.fasilitas||[];data.fasilitasRamahMuslim=obj.fasilitasRamahMuslim||[];data.imageUrl=obj.imageUrl||''}if(adminType==='packages'){data.daftarDestinasi=obj.daftarDestinasi||[]}if(id)Object.assign(obj,data);else db[adminType].push({id:adminType[0]+Date.now(),...data});persist();closeModal();renderAdmin();renderDestinations();renderCatalogs();renderPackages();toast('Data berhasil disimpan')}}
+function deleteItem(id){if(!confirm('Hapus data ini?'))return;db[adminType]=db[adminType].filter(x=>x.id!==id);persist();renderAdmin();renderDestinations();renderCatalogs();renderPackages();toast('Data dihapus')}
+document.getElementById('adminTabs').addEventListener('click',e=>{let b=e.target.closest('[data-type]');if(b){adminType=b.dataset.type;renderAdmin()}});
+document.getElementById('search').addEventListener('input',renderDestinations);document.getElementById('region').addEventListener('change',renderDestinations);document.getElementById('sort').addEventListener('change',renderDestinations);
+document.getElementById('interest').addEventListener('change',renderPackages);document.getElementById('budget').addEventListener('input',renderPackages);
+const translations={en:{navDest:'Destinations',navFood:'Culinary',navStay:'Accommodation',navPlan:'Trip planner',heroTitle:'Explore Aceh,<br><em>find your meaning.</em>',heroDesc:'From historic landmarks to coastal wonders, discover a thoughtful and Muslim-friendly journey.'}};
+document.getElementById('lang').addEventListener('change',e=>{language=e.target.value;let en=language==='en';document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=en?(translations.en[el.dataset.i18n]||el.textContent):({navDest:'Destinasi',navFood:'Kuliner',navStay:'Akomodasi',navPlan:'Rencana Perjalanan'}[el.dataset.i18n]));document.getElementById('heroTitle').innerHTML=en?translations.en.heroTitle:'Aceh, beyond<br><em>the ordinary.</em>';document.getElementById('heroDesc').textContent=en?translations.en.heroDesc:'A thoughtful journey through heritage, nature, and Muslim-friendly experiences. Discover the soul of Aceh at your own pace.';toast(en?'Language changed to English':'Bahasa diubah ke Indonesia')});
+
+function initRanupMap(){
+ const node=document.getElementById('ranupMap');
+ if(!node || typeof L==='undefined') return;
+ if(window.ranupLeafletMap){window.ranupLeafletMap.remove();window.ranupLeafletMap=null;}
+ const map=L.map(node,{scrollWheelZoom:false}).setView([4.95,96.15],7);
+ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{
+   maxZoom:19,
+   attribution:'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>'
+ }).addTo(map);
+ const bounds=[];
+ db.destinations.forEach(d=>{
+   const c=mapCoordinates[d.id];if(!c)return;bounds.push(c);
+   const marker=L.marker(c).addTo(map);
+   marker.bindPopup(`<strong>${esc(d.nama)}</strong><br>${esc(d.wilayah)} · ${esc(d.kategori)}<br><a href="https://www.google.com/maps/dir/?api=1&destination=${c[0]},${c[1]}" target="_blank" rel="noopener">Rute ke lokasi ↗</a>`);
+ });
+ if(bounds.length)map.fitBounds(bounds,{padding:[24,24],maxZoom:8});
+ window.ranupLeafletMap=map;
+ setTimeout(()=>map.invalidateSize(),250);
+}
+function showPhotoCredits(){
+ const credits=[
+  ['Masjid Raya Baiturrahman','ROFIQOHHASAN','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:Masjid_Baiturrahman_Aceh.jpg'],
+  ['Museum Tsunami Aceh','Dicky Herlambang','CC0 1.0','https://commons.wikimedia.org/wiki/File:Museum_tsunami_aceh.jpg'],
+  ['Gunongan','Tinta Emas Historia Network','CC0 1.0','https://commons.wikimedia.org/wiki/File:Gunongan_Aceh_Sultanate,_diambil_5_May_2026.jpg'],
+  ['Pantai Iboih','fitri agung','CC BY 2.0','https://commons.wikimedia.org/wiki/File:Iboih_beach,_Sabang,_Aceh;_August_2010.jpg'],
+  ['Tugu KM 0 Sabang','BPKS','Public domain Indonesia','https://commons.wikimedia.org/wiki/File:Tugu_KM_0_Sabang.png'],
+  ['Pantai Lampuuk','Astari28','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:Pantai_Lampuuk_Aceh.jpg'],
+  ['Danau Lut Tawar','Mukhtar Juned','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:Danau_Laut_Tawar_Takengon.jpg'],
+  ['Pantan Terong','OJI 007','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:Pantan_Terong_Aceh.jpg'],
+  ['Kebun kopi Takengon','USAID Indonesia','Public domain (US government work)','https://commons.wikimedia.org/wiki/File:Coffee_Plantation_in_Takengon_Aceh_(5281850478).jpg'],
+  ['PLTD Apung','Hillun Vilayl Napis','CC BY-SA 4.0','https://commons.wikimedia.org/wiki/File:PLTD_Apung.jpg']
+ ];
+ document.getElementById('modalContent').innerHTML=`<div class="eyebrow">IMAGE SOURCES</div><h2>Kredit fotografi</h2><div class="modalBody">${credits.map(x=>`<div class="activity"><span><b>${esc(x[0])}</b><br><small>${esc(x[1])} · ${esc(x[2])}</small></span><a target="_blank" rel="noopener" href="${x[3]}">Lisensi ↗</a></div>`).join('')}<p class="notice">Periksa ketentuan lisensi setiap file sebelum distribusi komersial. Foto berlisensi CC BY-SA memiliki kewajiban atribusi dan share-alike.</p></div>`;
+ openModal();
+}
+
+document.getElementById('tripDate').value=new Date().toISOString().slice(0,10);
+renderChips();renderDestinations();renderCatalogs();renderPackages();initRanupMap();
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin="" onload="initRanupMap()"></script>
+</body></html>
